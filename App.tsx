@@ -106,6 +106,14 @@ const App: React.FC = () => {
           Start Simulation
           <ChevronRight className="inline ml-2 group-hover:translate-x-1 transition-transform" />
         </button>
+        <a
+          href="https://github.com/voku/WhyPHPStan"
+          className="mt-6 text-sm text-emerald-300 hover:text-emerald-200 transition-colors"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Contribute on GitHub →
+        </a>
       </div>
     );
   }
@@ -199,6 +207,19 @@ const App: React.FC = () => {
         </div>
 
       </main>
+      <footer className="border-t border-slate-800 py-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-400">
+          <span>Share improvements, ideas, or fixes with the community.</span>
+          <a
+            href="https://github.com/voku/WhyPHPStan"
+            className="text-emerald-300 hover:text-emerald-200 transition-colors"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Contribute on GitHub →
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
