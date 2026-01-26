@@ -1,0 +1,27 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A" />
+      <stop offset="1" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#38BDF8" />
+      <stop offset="1" stop-color="#A855F7" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="48" fill="url(#bg)" />
+  <rect x="72" y="72" width="1056" height="12" rx="6" fill="url(#accent)" />
+  <rect x="72" y="546" width="320" height="8" rx="4" fill="url(#accent)" opacity="0.7" />
+  <g opacity="0.18">
+    <circle cx="1000" cy="140" r="120" stroke="#38BDF8" stroke-width="2" />
+    <circle cx="1035" cy="180" r="80" stroke="#A855F7" stroke-width="2" />
+    <circle cx="960" cy="210" r="40" stroke="#22D3EE" stroke-width="2" />
+  </g>
+  <text x="96" y="220" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="58" font-weight="800">Code Crash Simulator</text>
+  <text x="96" y="295" fill="#CBD5F5" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="500">See how tests, types, and static analysis stop bugs.</text>
+  <text x="96" y="370" fill="#94A3B8" font-family="JetBrains Mono, ui-monospace, monospace" font-size="24" font-weight="600">Vite + React • Interactive safety scenarios</text>
+  <g transform="translate(96 430)">
+    <rect width="220" height="48" rx="24" fill="#1E293B" stroke="#38BDF8" stroke-width="2" />
+    <text x="24" y="32" fill="#E2E8F0" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600">whyphpstan</text>
+  </g>
+</svg>
