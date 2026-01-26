@@ -1,0 +1,5 @@
+{
+  "name": "Code Crash Simulator",
+  "description": "A simulation of code safety layers (Tests, Types, Static Analysis) visualized as vehicle safety features, wrapped around a technical blog post.",
+  "requestFramePermissions": []
+}
