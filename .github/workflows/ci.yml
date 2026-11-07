@@ -22,4 +22,6 @@ jobs:
       - run: npm ci
       - name: Type check
         run: ./node_modules/.bin/tsc --noEmit
+      - name: Test Vite React JSX transformation
+        run: node --test tests/react-vite-plugin.test.mjs
       - run: npm run build
