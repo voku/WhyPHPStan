@@ -1,19 +1,20 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { createServer } from 'vite';
+import { build } from 'vite';
 
-test('configured Vite React plugin transforms the real TSX entrypoint', async () => {
-  const server = await createServer({
+test('configured React plugin builds the real TSX app without writing files', async () => {
+  const result = await build({
     configFile: 'vite.config.ts',
     logLevel: 'silent',
-    server: { middlewareMode: true },
+    build: { write: false },
   });
 
-  try {
-    const result = await server.transformRequest('/index.tsx');
-    assert.ok(result, 'Expected Vite to transform index.tsx');
-    assert.match(result.code, /react\/jsx-(?:dev-)?runtime/, 'Expected JSX runtime transformation');
-  } finally {
-    await server.close();
-  }
+  const outputs = Array.isArray(result) ? result : [result];
+  const generated = outputs.flatMap((item) => item.output ?? []);
+  const js = generated.filter((item) => item.type === 'chunk' && item.fileName.endsWith('.js'));
+  const html = generated.filter((item) => item.type === 'asset' && item.fileName === 'index.html');
+
+  assert.ok(js.length > 0, 'React/TSX bundle must be generated');
+  assert.equal(html.length, 1, 'App HTML entry must be generated');
+  assert.ok(js.some((item) => item.code.length > 100), 'JSX must compile into executable JavaScript');
 });
